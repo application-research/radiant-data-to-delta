@@ -7,8 +7,37 @@ from main import upload_to_delta
 
 
 def create_database():
+    # Establish connection to sqlite server
     sqlite3.connect('radiant_to_delta.db')
+    create_table()
 
+# Create the table for the Delta information
+def create_table():
+    connection = sqlite3.connect('radiant_to_delta.db')
+    cursor = connection.cursor()
+
+    # (Content ID: Integer, Name of File: String, Size of File: String, CID: String)
+    cursor.execute("""CREATE TABLE delta_info (id int,name text,size int,cid text)""")
+
+    connection.commit()
+    connection.close()
+
+def add_to_database(id:int, name:str, size:int, cid:str):
+    """
+    Save all Delta uploads to Database
+    :param id: Content ID of the Delta Upload
+    :param name: Name of the file
+    :param size: Size of the file being added
+    :param cid: Content Identifier of the Delta Upload
+    """
+    # Establish connection to database
+    connection = sqlite3.connect('radiant_to_delta.db')
+
+    cursor = connection.cursor()
+    # Insert information from Delta Upload
+    cursor.executemany("INSERT INTO delta_info VALUES (?,?,?,?)",[(id,name,size,cid)])
+    connection.commit()
+    connection.close()
 
 def create_app():
     app = FastAPI()
@@ -27,11 +56,13 @@ app = create_app()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "Delta!"}
 
 
 # upload a file endpoint with a miner and estuary_api_key
 @app.post("/upload")
 def upload_file(miner: str, estuary_api_key: str):
     return upload_to_delta(miner, estuary_api_key)
+
+
 
