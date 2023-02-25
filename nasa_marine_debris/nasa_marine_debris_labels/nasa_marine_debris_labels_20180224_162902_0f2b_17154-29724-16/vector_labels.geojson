@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85557_20180224_162902_0f2b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -85.766189, 16.48473 ], [ -85.765634, 16.48473 ], [ -85.765634, 16.484203 ], [ -85.766189, 16.484203 ], [ -85.766189, 16.48473 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85556_20180224_162902_0f2b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -85.766448, 16.485244 ], [ -85.766087, 16.485244 ], [ -85.766087, 16.484769 ], [ -85.766448, 16.484769 ], [ -85.766448, 16.485244 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85544_20180224_162902_0f2b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -85.765293, 16.48542 ], [ -85.7647705078125, 16.48542 ], [ -85.7647705078125, 16.484787 ], [ -85.765293, 16.484787 ], [ -85.765293, 16.48542 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85554_20180224_162902_0f2b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -85.770103, 16.485586 ], [ -85.76952, 16.485586 ], [ -85.76952, 16.485054 ], [ -85.770103, 16.485054 ], [ -85.770103, 16.485586 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85555_20180224_162902_0f2b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -85.766946, 16.485874 ], [ -85.766406, 16.485874 ], [ -85.766406, 16.485354 ], [ -85.766946, 16.485354 ], [ -85.766946, 16.485874 ] ] ] } }
+]
+}

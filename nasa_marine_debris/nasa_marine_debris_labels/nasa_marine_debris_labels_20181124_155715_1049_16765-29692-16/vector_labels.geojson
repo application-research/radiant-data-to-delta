@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85371_20181124_155715_1049", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.90616, 16.656132 ], [ -87.90616, 16.652586 ], [ -87.9071044921875, 16.652586 ], [ -87.9071044921875, 16.656132 ], [ -87.90616, 16.656132 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85367_20181124_155715_1049", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.906629, 16.65204 ], [ -87.906629, 16.651980920459739 ], [ -87.9071044921875, 16.651980920459739 ], [ -87.9071044921875, 16.65204 ], [ -87.906629, 16.65204 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85372_20181124_155715_1049", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.904615, 16.656481 ], [ -87.903264, 16.656481 ], [ -87.903264, 16.654905 ], [ -87.904615, 16.654905 ], [ -87.904615, 16.656481 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85374_20181124_155715_1049", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.903865, 16.657243645360769 ], [ -87.901611328125, 16.657243645360769 ], [ -87.901611328125, 16.656212 ], [ -87.903865, 16.656212 ], [ -87.903865, 16.657243645360769 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85373_20181124_155715_1049", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.902967, 16.65554 ], [ -87.901611328125, 16.65554 ], [ -87.901611328125, 16.65286 ], [ -87.902967, 16.65286 ], [ -87.902967, 16.65554 ] ] ] } }
+]
+}

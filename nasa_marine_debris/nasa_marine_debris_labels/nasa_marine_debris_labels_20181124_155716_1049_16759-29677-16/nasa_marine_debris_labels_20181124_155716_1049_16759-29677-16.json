@@ -1,0 +1,122 @@
+{
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "id": "nasa_marine_debris_labels_20181124_155716_1049_16759-29677-16",
+    "properties": {
+        "datetime": "2018-11-24T00:00:00Z",
+        "label:type": "vector",
+        "label:properties": [
+            "earth_science_event"
+        ],
+        "label:classes": [
+            {
+                "name": "earth_science_event",
+                "classes": [
+                    "Marine Debris"
+                ]
+            }
+        ],
+        "label:overviews": [
+            {
+                "property_key": "earth_science_event",
+                "counts": [
+                    {
+                        "name": "Marine Debris",
+                        "count": 1
+                    }
+                ]
+            }
+        ],
+        "label:description": "marine debris earth science event labels"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -87.9400634765625,
+                    16.736167140985216
+                ],
+                [
+                    -87.9400634765625,
+                    16.730906589733923
+                ],
+                [
+                    -87.9345703125,
+                    16.730906589733923
+                ],
+                [
+                    -87.9345703125,
+                    16.736167140985216
+                ],
+                [
+                    -87.9400634765625,
+                    16.736167140985216
+                ]
+            ]
+        ]
+    },
+    "links": [
+        {
+            "rel": "source",
+            "href": "../../nasa_marine_debris_source/nasa_marine_debris_source_20181124_155716_1049_16759-29677-16/nasa_marine_debris_source_20181124_155716_1049_16759-29677-16.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "../collection.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "self",
+            "href": "nasa_marine_debris_labels_20181124_155716_1049_16759-29677-16.json",
+            "type": "application/json"
+        }
+    ],
+    "assets": {
+        "pixel_bounds": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/nasa-marine-debris/labels/20181124_155716_1049_16759-29677-16.npy",
+            "type": "application/octet-stream",
+            "roles": [
+                "metadata"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot"
+        },
+        "vector_labels": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/nasa-marine-debris/labels/20181124_155716_1049_16759-29677-16.geojson",
+            "type": "application/geo+json",
+            "roles": [
+                "data",
+                "labels"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot"
+        }
+    },
+    "bbox": [
+        -87.9400634765625,
+        16.730906589733923,
+        -87.9345703125,
+        16.736167140985216
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/label/v1.0.1/schema.json"
+    ],
+    "collection": "nasa_marine_debris_labels"
+}

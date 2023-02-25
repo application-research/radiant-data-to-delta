@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile84842_20170323_152750_0e20", "metadata": { "": "", "SceneID": "20170323_152750_0e20" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -84.977284, 16.080633 ], [ -84.976328, 16.080633 ], [ -84.976328, 16.080011 ], [ -84.977284, 16.080011 ], [ -84.977284, 16.080633 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile84844_20170323_152750_0e20", "metadata": { "": "", "SceneID": "20170323_152750_0e20" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -84.978758, 16.080277 ], [ -84.978758, 16.079638 ], [ -84.979248046875, 16.079638 ], [ -84.979248046875, 16.080277 ], [ -84.978758, 16.080277 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile84843_20170323_152750_0e20", "metadata": { "": "", "SceneID": "20170323_152750_0e20" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -84.978754, 16.080462 ], [ -84.977404, 16.080462 ], [ -84.977404, 16.079793 ], [ -84.978754, 16.079793 ], [ -84.978754, 16.080462 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile84841_20170323_152750_0e20", "metadata": { "": "", "SceneID": "20170323_152750_0e20" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -84.97633, 16.080855 ], [ -84.974901, 16.080855 ], [ -84.974901, 16.080208 ], [ -84.97633, 16.080208 ], [ -84.97633, 16.080855 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile84840_20170323_152750_0e20", "metadata": { "": "", "SceneID": "20170323_152750_0e20" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -84.974886, 16.081228 ], [ -84.9737548828125, 16.081228 ], [ -84.9737548828125, 16.080492 ], [ -84.974886, 16.080492 ], [ -84.974886, 16.081228 ] ] ] } }
+]
+}

@@ -1,0 +1,267 @@
+{
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "label",
+        "scientific"
+    ],
+    "id": "umd_mali_crop_type_labels",
+    "type": "Collection",
+    "title": "2019 Mali CropType Training Data",
+    "description": "2019 Mali CropType Training Data Labels",
+    "license": "CC-BY-4.0",
+    "providers": [
+        {
+            "name": "University of Maryland",
+            "roles": [
+                "licensor",
+                "producer",
+                "processor"
+            ],
+            "url": "https://www.umd.edu/"
+        },
+        {
+            "name": "Radiant Earth Foundation",
+            "roles": [
+                "host"
+            ],
+            "url": "https://radiant.earth"
+        }
+    ],
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -6.944401483956586,
+                    12.818555212842782,
+                    -6.589048148922875,
+                    13.37343914101266
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2019-05-01T00:00:00Z",
+                    "2019-11-27T00:00:00Z"
+                ]
+            ]
+        }
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "collection.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "../catalog.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "parent",
+            "href": "../catalog.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_1/umd_mali_crop_type_labels_1.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_2/umd_mali_crop_type_labels_2.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_3/umd_mali_crop_type_labels_3.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_4/umd_mali_crop_type_labels_4.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_5/umd_mali_crop_type_labels_5.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_6/umd_mali_crop_type_labels_6.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_7/umd_mali_crop_type_labels_7.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_8/umd_mali_crop_type_labels_8.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_9/umd_mali_crop_type_labels_9.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_10/umd_mali_crop_type_labels_10.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_11/umd_mali_crop_type_labels_11.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_12/umd_mali_crop_type_labels_12.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_13/umd_mali_crop_type_labels_13.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_14/umd_mali_crop_type_labels_14.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_15/umd_mali_crop_type_labels_15.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_16/umd_mali_crop_type_labels_16.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_17/umd_mali_crop_type_labels_17.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_18/umd_mali_crop_type_labels_18.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_19/umd_mali_crop_type_labels_19.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_20/umd_mali_crop_type_labels_20.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_21/umd_mali_crop_type_labels_21.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_22/umd_mali_crop_type_labels_22.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_23/umd_mali_crop_type_labels_23.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_24/umd_mali_crop_type_labels_24.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_25/umd_mali_crop_type_labels_25.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_26/umd_mali_crop_type_labels_26.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_27/umd_mali_crop_type_labels_27.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_28/umd_mali_crop_type_labels_28.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_29/umd_mali_crop_type_labels_29.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_30/umd_mali_crop_type_labels_30.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_31/umd_mali_crop_type_labels_31.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_32/umd_mali_crop_type_labels_32.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "item",
+            "href": "umd_mali_crop_type_labels_33/umd_mali_crop_type_labels_33.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.34911/rdnt.tgz68o"
+        }
+    ],
+    "sci:doi": "10.34911/rdnt.tgz68o",
+    "sci:citation": "Nakalembe, C.L., Ouedraogo, H., Diarra, N., & Kuzimbu, B. (2021). 2019 Mali Crop Type Training Data for Machine Learning (Version 1.0) Radiant MLHub. [Date Accessed] https://doi.org/10.34911/rdnt.tgz68o",
+    "assets": {
+        "documentation": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/documentation.pdf",
+            "type": "application/pdf"
+        }
+    },
+    "summaries": {
+        "label:classes": [
+            {
+                "name": null,
+                "classes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        ],
+        "label:type": [
+            "raster"
+        ],
+        "proj:epsg": [
+            32629
+        ],
+        "proj:shape": [
+            256
+        ]
+    }
+}

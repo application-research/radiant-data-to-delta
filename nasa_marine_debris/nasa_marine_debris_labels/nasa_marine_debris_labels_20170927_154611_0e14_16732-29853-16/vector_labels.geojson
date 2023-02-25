@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85203_20170927_154611_0e14", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -88.085507, 15.805841 ], [ -88.084385, 15.805841 ], [ -88.084385, 15.803418 ], [ -88.085507, 15.803418 ], [ -88.085507, 15.805841 ] ] ] } }
+]
+}

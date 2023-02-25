@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85881_20181031_095925_103b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -0.226846, 5.491028 ], [ -0.226174, 5.491028 ], [ -0.226174, 5.490236007479092 ], [ -0.226846, 5.490236007479092 ], [ -0.226846, 5.491028 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85880_20181031_095925_103b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -0.229273, 5.491305 ], [ -0.227473, 5.491305 ], [ -0.227473, 5.490236007479092 ], [ -0.229273, 5.490236007479092 ], [ -0.229273, 5.491305 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85884_20181031_095925_103b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -0.227405, 5.490789 ], [ -0.226959, 5.490789 ], [ -0.226959, 5.490241 ], [ -0.227405, 5.490241 ], [ -0.227405, 5.490789 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85899_20181031_095925_103b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -0.229954, 5.490818 ], [ -0.229431, 5.490818 ], [ -0.229431, 5.490236007479092 ], [ -0.229954, 5.490236007479092 ], [ -0.229954, 5.490818 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85898_20181031_095925_103b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -0.226083, 5.491207 ], [ -0.225567, 5.491207 ], [ -0.225567, 5.490681 ], [ -0.226083, 5.490681 ], [ -0.226083, 5.491207 ] ] ] } }
+]
+}

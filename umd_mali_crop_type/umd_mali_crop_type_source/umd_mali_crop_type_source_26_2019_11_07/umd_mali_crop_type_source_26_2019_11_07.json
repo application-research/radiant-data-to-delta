@@ -1,0 +1,539 @@
+{
+    "assets": {
+        "B01": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B01_10m.tif",
+            "title": "B01",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B01",
+                    "common_name": "coastal",
+                    "description": "Coastal Aerosol (0.400-0.450\u00b5m)",
+                    "center_wavelength": 0.443
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "coastal"
+                }
+            ]
+        },
+        "B02": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B02_10m.tif",
+            "title": "B02",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B02",
+                    "common_name": "blue",
+                    "description": "Blue (0.450-0.500\u00b5m)",
+                    "center_wavelength": 0.492
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "blue"
+                }
+            ]
+        },
+        "B03": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B03_10m.tif",
+            "title": "B03",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B03",
+                    "common_name": "green",
+                    "description": "Green (0.500-0.600\u00b5m)",
+                    "center_wavelength": 0.56
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "green"
+                }
+            ]
+        },
+        "B04": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B04_10m.tif",
+            "title": "B04",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B04",
+                    "common_name": "red",
+                    "description": "Red (0.600-0.700\u00b5m)",
+                    "center_wavelength": 0.665
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "red"
+                }
+            ]
+        },
+        "B05": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B05_10m.tif",
+            "title": "B05",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B05",
+                    "common_name": "rededge",
+                    "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                    "center_wavelength": 0.704
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "rededge"
+                }
+            ]
+        },
+        "B06": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B06_10m.tif",
+            "title": "B06",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B06",
+                    "common_name": "rededge",
+                    "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                    "center_wavelength": 0.741
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "rededge"
+                }
+            ]
+        },
+        "B07": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B07_10m.tif",
+            "title": "B07",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B07",
+                    "common_name": "rededge",
+                    "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                    "center_wavelength": 0.783
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "rededge"
+                }
+            ]
+        },
+        "B08": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B08_10m.tif",
+            "title": "B08",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B08",
+                    "common_name": "nir",
+                    "description": "Near Infrared (0.750-1.000\u00b5m)",
+                    "center_wavelength": 0.833
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "nir"
+                }
+            ]
+        },
+        "B09": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B09_10m.tif",
+            "title": "B09",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B09",
+                    "common_name": "nir09",
+                    "description": "Water Vapour (0.850-1.050\u00b5m)",
+                    "center_wavelength": 0.945
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "nir09"
+                }
+            ]
+        },
+        "B11": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B11_10m.tif",
+            "title": "B11",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B11",
+                    "common_name": "swir16",
+                    "description": "Short Wavelength Infrared 1 (1.550-1.750\u00b5m)",
+                    "center_wavelength": 1.614
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "swir16"
+                }
+            ]
+        },
+        "B12": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B12_10m.tif",
+            "title": "B12",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B12",
+                    "common_name": "swir22",
+                    "description": "Short Wavelength Infrared 2 (2.100-2.300\u00b5m)",
+                    "center_wavelength": 2.202
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "swir22"
+                }
+            ]
+        },
+        "B8A": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_B8A_10m.tif",
+            "title": "B8A",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "eo:bands": [
+                {
+                    "name": "B8A",
+                    "common_name": "nir08",
+                    "description": "Narrow NIR (0.750-0.900\u00b5m)",
+                    "center_wavelength": 0.865
+                }
+            ],
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0,
+                    "name": "nir08"
+                }
+            ]
+        },
+        "CLM": {
+            "href": "https://radiantearth.blob.core.windows.net/mlhub/umd-mali-crop-type/imagery/256:0:10.0:29:91:556/2019_11_07/256:0:10.0:29:91:556_2019_11_07_CLM_10m.tif",
+            "title": "CLM",
+            "type": "image/tiff; application=geotiff",
+            "roles": [
+                "data-mask"
+            ],
+            "storage:platform": "AZURE",
+            "storage:region": "westeurope",
+            "storage:requester_pays": false,
+            "storage:tier": "hot",
+            "raster:bands": [
+                {
+                    "nodata": "nan",
+                    "data_type": "uint8",
+                    "spatial_resolution": 10.0
+                }
+            ],
+            "classification:classes": [
+                {
+                    "name": "No Clouds",
+                    "value": 0
+                },
+                {
+                    "name": "Clouds",
+                    "value": 1
+                },
+                {
+                    "name": "No Data",
+                    "value": 2
+                }
+            ]
+        }
+    },
+    "bbox": [
+        -6.8533384880615165,
+        12.866444440451149,
+        -6.829561487173397,
+        12.889771818316369
+    ],
+    "collection": "umd_mali_crop_type_source",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -6.82976064629896,
+                    12.866444440451149
+                ],
+                [
+                    -6.829561487173397,
+                    12.889577304326874
+                ],
+                [
+                    -6.853141488559988,
+                    12.889771818316369
+                ],
+                [
+                    -6.8533384880615165,
+                    12.866638593774054
+                ],
+                [
+                    -6.82976064629896,
+                    12.866444440451149
+                ]
+            ]
+        ]
+    },
+    "id": "umd_mali_crop_type_source_26_2019_11_07",
+    "links": [
+        {
+            "href": "../collection.json",
+            "rel": "collection",
+            "type": "application/json"
+        },
+        {
+            "href": "umd_mali_crop_type_source_26_2019_11_07.json",
+            "rel": "self",
+            "type": "application/json"
+        },
+        {
+            "href": "../../catalog.json",
+            "rel": "root",
+            "type": "application/json"
+        },
+        {
+            "href": "../collection.json",
+            "rel": "parent",
+            "type": "application/json"
+        }
+    ],
+    "properties": {
+        "constellation": "sentinel-2",
+        "datetime": "2019-11-07T00:00:00Z",
+        "eo:bands": [
+            {
+                "name": "B01",
+                "common_name": "coastal",
+                "description": "Coastal Aerosol (0.400-0.450\u00b5m)",
+                "center_wavelength": 0.443
+            },
+            {
+                "name": "B02",
+                "common_name": "blue",
+                "description": "Blue (0.450-0.500\u00b5m)",
+                "center_wavelength": 0.492
+            },
+            {
+                "name": "B03",
+                "common_name": "green",
+                "description": "Green (0.500-0.600\u00b5m)",
+                "center_wavelength": 0.56
+            },
+            {
+                "name": "B04",
+                "common_name": "red",
+                "description": "Red (0.600-0.700\u00b5m)",
+                "center_wavelength": 0.665
+            },
+            {
+                "name": "B05",
+                "common_name": "rededge",
+                "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                "center_wavelength": 0.704
+            },
+            {
+                "name": "B06",
+                "common_name": "rededge",
+                "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                "center_wavelength": 0.741
+            },
+            {
+                "name": "B07",
+                "common_name": "rededge",
+                "description": "Vegetation Red Edge (0.700-0.790\u00b5m)",
+                "center_wavelength": 0.783
+            },
+            {
+                "name": "B08",
+                "common_name": "nir",
+                "description": "Near Infrared (0.750-1.000\u00b5m)",
+                "center_wavelength": 0.833
+            },
+            {
+                "name": "B8A",
+                "common_name": "nir08",
+                "description": "Narrow NIR (0.750-0.900\u00b5m)",
+                "center_wavelength": 0.865
+            },
+            {
+                "name": "B09",
+                "common_name": "nir09",
+                "description": "Water Vapour (0.850-1.050\u00b5m)",
+                "center_wavelength": 0.945
+            },
+            {
+                "name": "B11",
+                "common_name": "swir16",
+                "description": "Short Wavelength Infrared 1 (1.550-1.750\u00b5m)",
+                "center_wavelength": 1.614
+            },
+            {
+                "name": "B12",
+                "common_name": "swir22",
+                "description": "Short Wavelength Infrared 2 (2.100-2.300\u00b5m)",
+                "center_wavelength": 2.202
+            }
+        ],
+        "gsd": 10,
+        "instruments": [
+            "msi"
+        ],
+        "platform": "Sentinel-2B",
+        "mission": "sentinel-2",
+        "proj:epsg": 32629,
+        "proj:transform": [
+            10.0,
+            0.0,
+            732960.0,
+            0.0,
+            -10.0,
+            1425920.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "proj:shape": [
+            256,
+            256
+        ]
+    },
+    "stac_extensions": [
+        "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/classification/v1.1.0/schema.json"
+    ],
+    "stac_version": "1.0.0",
+    "type": "Feature"
+}

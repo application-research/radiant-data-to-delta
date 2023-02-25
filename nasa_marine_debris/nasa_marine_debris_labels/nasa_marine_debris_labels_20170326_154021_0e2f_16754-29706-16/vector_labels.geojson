@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85126_20170326_154021_0e2f", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.963725, 16.581011 ], [ -87.962639, 16.581011 ], [ -87.962639, 16.580177 ], [ -87.963725, 16.580177 ], [ -87.963725, 16.581011 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85123_20170326_154021_0e2f", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.966865, 16.582554 ], [ -87.966865, 16.581036 ], [ -87.967529296875, 16.581036 ], [ -87.967529296875, 16.582554 ], [ -87.966865, 16.582554 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85124_20170326_154021_0e2f", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.966321, 16.581431 ], [ -87.9656, 16.581431 ], [ -87.9656, 16.58057 ], [ -87.966321, 16.58057 ], [ -87.966321, 16.581431 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85125_20170326_154021_0e2f", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -87.964935, 16.581011 ], [ -87.96422, 16.581011 ], [ -87.96422, 16.580307 ], [ -87.964935, 16.580307 ], [ -87.964935, 16.581011 ] ] ] } }
+]
+}

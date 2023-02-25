@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85267_20180224_153959_0f1b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -86.078988, 16.513696 ], [ -86.077880859375, 16.513696 ], [ -86.077880859375, 16.512585 ], [ -86.078988, 16.512585 ], [ -86.078988, 16.513696 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85266_20180224_153959_0f1b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -86.079344, 16.512547 ], [ -86.078171, 16.512547 ], [ -86.078171, 16.511512 ], [ -86.079344, 16.511512 ], [ -86.079344, 16.512547 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85263_20180224_153959_0f1b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -86.081697, 16.514888 ], [ -86.080871, 16.514888 ], [ -86.080871, 16.514226 ], [ -86.081697, 16.514226 ], [ -86.081697, 16.514888 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85264_20180224_153959_0f1b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -86.080223, 16.515099441440775 ], [ -86.079438, 16.515099441440775 ], [ -86.079438, 16.514521 ], [ -86.080223, 16.514521 ], [ -86.080223, 16.515099441440775 ] ] ] } },
+{ "type": "Feature", "properties": { "earth_science_event": "Marine Debris", "tag_status": "yes", "label": "shapefile85265_20180224_153959_0f1b", "metadata": { "": "" }, "name": "marine_debris", "labels": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -86.080401, 16.513723 ], [ -86.07977, 16.513723 ], [ -86.07977, 16.513058 ], [ -86.080401, 16.513058 ], [ -86.080401, 16.513723 ] ] ] } }
+]
+}
