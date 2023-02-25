@@ -5,6 +5,7 @@ import ssl
 import sys
 from codecs import encode
 from radiant_mlhub import Dataset
+import threading
 
 context = ssl.create_default_context()
 context.check_hostname = False
@@ -70,18 +71,26 @@ def get_all_files(directory):
     return file_paths
 
 
-miner = sys.argv[1]
-estuary_api_key = sys.argv[2]
-
-print("miner: " + miner)
-print("estuary_api_key: " + estuary_api_key)
-
-datasets = Dataset.list()
-for dataset in datasets[0:5]:
-    # dataset = Dataset.fetch_by_id('nasa_marine_debris')
+def process_data_set(dataset):
     dataset.download()
 
     # get all files and upload to delta with a given SP
     files = get_all_files("./" + dataset.id)
     for file in files:
         upload_to_delta(file, miner, estuary_api_key)
+
+
+miner = sys.argv[1]
+estuary_api_key = sys.argv[2]
+datasets = Dataset.list()
+
+print("miner: " + miner)
+print("estuary_api_key: " + estuary_api_key)
+print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
+
+length = datasets.__sizeof__()
+threads = []
+for dataset in datasets[0:length]:
+    t = threading.Thread(target=process_data_set, args=(dataset,))
+    threads.append(t)
+    t.start()
