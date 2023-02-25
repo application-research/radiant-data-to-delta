@@ -2,9 +2,9 @@ import sqlite3
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.param_functions import Path
 
 from main import upload_to_delta
-
 
 def create_database():
     # Establish connection to sqlite server
@@ -64,5 +64,28 @@ def read_root():
 def upload_file(miner: str, estuary_api_key: str):
     return upload_to_delta(miner, estuary_api_key)
 
+@app.get("/search/{id}")
+def search_database(id: Path(...)):
+    """
+    Search Function to query through the database
+    :param id: Content ID to query through the database
+    :return: Fetched Result from the SQLite Database
+    """
+
+    # Establish Connection
+    connection = sqlite3.connect('radiant_to_delta.db')
+    cursor = connection.cursor()
+
+    # Select the row where the ID is:
+    cursor.execute("SELECT * FROM delta_info WHERE id = ?",(id,))
+    result = cursor.fetchone()
+    connection.close()
+
+    # If the result is there, return the result, else return an error statement
+    if result:
+        # Return the result at this endpoint
+        return {"data": result}
+    else:
+        return {"error": "ID not found inside the Radiant Data"}
 
 
