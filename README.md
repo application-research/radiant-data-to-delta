@@ -75,9 +75,19 @@ mlhub configure
 API Key: Enter your API key here...
 ```
 
-Run the script
+## Download the files first
 ```bash
-python main.py <miner> <estuary_api_key>
+python main.py <miner> <estuary_api_key> true false false
+```
+
+## Group the files
+```bash
+python main.py <miner> <estuary_api_key> false true false
+```
+
+## Push the batch files to delta
+```bash
+python main.py <miner> <estuary_api_key> false false true
 ```
 
 # Author

@@ -2,6 +2,8 @@ import http.client
 import mimetypes
 import os
 import ssl
+import datetime
+import shutil
 import sys
 from codecs import encode
 from radiant_mlhub import Dataset
@@ -71,26 +73,66 @@ def get_all_files(directory):
     return file_paths
 
 
-def process_data_set(dataset):
-    dataset.download()
+def process_data_set(dataset, location="./all_datasets/"):
+    dataset.download(location)
+    batch_files()
 
+
+def batch_files(location="./all_datasets/", output_location="./all_output/"):
     # get all files and upload to delta with a given SP
-    files = get_all_files("./" + dataset.id)
+    files = get_all_files(location)
+
+    batch_size = 3 * 1024 * 1024 * 1024 # 5GB
+    batches = []
+    batch = []
+    batch_size_so_far = 0
+
     for file in files:
-        upload_to_delta(file, miner, estuary_api_key)
+        file_size = os.path.getsize(file)
+        if batch_size_so_far + file_size > batch_size:
+            batches.append(batch)
+            batch = []
+            batch_size_so_far = 0
+        batch.append(file)
+        batch_size_so_far += file_size
+    batches.append(batch)
+
+    # add counter
+    counter = 0
+    for batch in batches:
+        location = output_location + "car_" + datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(counter) + "/"
+        counter += 1
+        os.mkdir(location)
+        batch_temp_folder = location
+        # copy files to the batch temp folder
+        for file in batch:
+            shutil.copy(file, batch_temp_folder)
 
 
 miner = sys.argv[1]
 estuary_api_key = sys.argv[2]
+download_only = sys.argv[3]
+batch_all_files = sys.argv[4]
+push_to_delta = sys.argv[5]
 datasets = Dataset.list()
 
 print("miner: " + miner)
 print("estuary_api_key: " + estuary_api_key)
 print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
 
-length = datasets.__sizeof__()
-threads = []
-for dataset in datasets[0:length]:
-    t = threading.Thread(target=process_data_set, args=(dataset,))
-    threads.append(t)
-    t.start()
+if download_only == "true":
+    length = datasets.__sizeof__()
+    threads = []
+    for dataset in datasets[0:length]:
+        process_data_set(dataset)
+        t = threading.Thread(target=process_data_set, args=(dataset,))
+        threads.append(t)
+        t.start()
+
+if batch_all_files == "true":
+    batch_files()
+
+if push_to_delta == "true":
+    files = get_all_files("./all_output/")
+    for file in files:
+        upload_to_delta(file, miner, estuary_api_key)
