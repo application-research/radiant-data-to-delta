@@ -15,13 +15,11 @@ curl --location --request GET 'http://shuttle-4-bs2.estuary.tech:1414/api/v1/sta
 --header 'Authorization: Bearer [ESTUARY_API_KEY]'
 ```
 
-Sample: http://shuttle-4-bs2.estuary.tech:1414/api/v1/stats/content/21395
-
 Returns the following result from delta
 
 ```
 {
-    "commitment_piece": [
+    "piece_commitment": [
         {
             "ID": 20884,
             "cid": "bafybeihiecc3nltivel4mckhsuzzmf42rcuzcrb357enha7bvbimohxewy",
