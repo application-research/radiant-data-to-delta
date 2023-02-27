@@ -51,7 +51,7 @@ def upload_to_delta(file_path, miner, estuary_api_key):
         'Authorization': 'Bearer ' + estuary_api_key,
         'Content-type': 'multipart/form-data; boundary={}'.format(boundary)
     }
-    conn.request("POST", "/api.py/v1/deal/content", payload, headers)
+    conn.request("POST", "/api/v1/deal/content", payload, headers)
     res = conn.getresponse()
     data = res.read()
     print(data.decode("utf-8"))
