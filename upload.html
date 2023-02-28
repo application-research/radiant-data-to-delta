@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Upload File</title>
+    <style>
+      #drop-zone {
+        width: 300px;
+        height: 200px;
+        border: 2px dashed #aaa;
+        text-align: center;
+        margin: 20px auto;
+      }
+
+      form, h1,p{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Put in your miner, and then drag your file</h1>
+      <form>
+        <label for="miner">Miner :</label><br/>
+        <input type="text" id="miner" name="miner"><br/>
+      </form>
+      <br/>
+      <form>
+                <label for="Estuary Key">Estuary Key :</label><br/>
+        <input type="text" id="Estuary Key" name="estuary_key">
+      </form>
+    </div>
+    <div id="drop-zone" ondrop="uploadFile(event)" ondragover="return false">
+      <p>Drag and drop a file here to upload</p>
+    </div>
+
+    <script>
+      function uploadFile(event) {
+        event.preventDefault();
+        var miner = document.getElementById("miner").value
+        var key = document.getElementById("Estuary Key").value
+        if (document.getElementById('miner').value.length === 0 || document.getElementById('Estuary Key').value.length ===0){
+          alert("You need to input a miner!")
+        }
+        else {
+          var files = event.dataTransfer.files;
+          var formData = new FormData();
+          formData.append('miner', miner);
+          formData.append('key', key);
+          formData.append('file', files[0]);
+          fetch('/upload_files', {
+            method: "POST",
+            body: formData
+          })
+                  .then(response => response.json())
+
+          alert("File Uploaded Success")
+
+          location.replace("/")
+        }
+      }
+</script>
+  </body>
+</html>
