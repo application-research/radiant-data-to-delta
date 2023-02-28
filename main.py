@@ -124,7 +124,6 @@ if download_only == "true":
     length = datasets.__sizeof__()
     threads = []
     for dataset in datasets[0:length]:
-        process_data_set(dataset)
         t = threading.Thread(target=process_data_set, args=(dataset,))
         threads.append(t)
         t.start()
