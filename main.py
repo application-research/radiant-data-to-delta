@@ -2,10 +2,13 @@ import http.client
 import mimetypes
 import os
 import ssl
+import datetime
+import shutil
 import sys
 from codecs import encode
 from radiant_mlhub import Dataset
 import threading
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 context = ssl.create_default_context()
 context.check_hostname = False
@@ -49,7 +52,7 @@ def upload_to_delta(file_path, miner, estuary_api_key):
         'Authorization': 'Bearer ' + estuary_api_key,
         'Content-type': 'multipart/form-data; boundary={}'.format(boundary)
     }
-    conn.request("POST", "/api.py/v1/deal/content", payload, headers)
+    conn.request("POST", "/api/v1/deal/content", payload, headers)
     res = conn.getresponse()
     data = res.read()
     print(data.decode("utf-8"))
@@ -71,26 +74,75 @@ def get_all_files(directory):
     return file_paths
 
 
-def process_data_set(dataset):
-    dataset.download()
+def process_data_set(dataset, location="./all_datasets/"):
+    dataset.download(location)
+    batch_files()
 
+
+def batch_files(location="./all_datasets/", output_location="./all_output/"):
     # get all files and upload to delta with a given SP
-    files = get_all_files("./" + dataset.id)
+    files = get_all_files(location)
+
+    batch_size = 3 * 1024 * 1024 * 1024 # 5GB
+    batches = []
+    batch = []
+    batch_size_so_far = 0
+
     for file in files:
-        upload_to_delta(file, miner, estuary_api_key)
+        file_size = os.path.getsize(file)
+        if batch_size_so_far + file_size > batch_size:
+            batches.append(batch)
+            batch = []
+            batch_size_so_far = 0
+        batch.append(file)
+        batch_size_so_far += file_size
+    batches.append(batch)
+
+    # add counter
+    counter = 0
+    for batch in batches:
+        location = output_location + "car_" + datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(counter) + "/"
+        counter += 1
+        os.mkdir(location)
+        batch_temp_folder = location
+        # copy files to the batch temp folder
+        for file in batch:
+            shutil.copy(file, batch_temp_folder)
 
 
 miner = sys.argv[1]
 estuary_api_key = sys.argv[2]
+download_only = sys.argv[3]
+length_from_download = sys.argv[4]
+length_to_download = sys.argv[5]
+batch_all_files = sys.argv[6]
+push_to_delta = sys.argv[7]
 datasets = Dataset.list()
 
 print("miner: " + miner)
 print("estuary_api_key: " + estuary_api_key)
 print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
+print("length_from_download: " + length_from_download)
+print("length_to_download: " + length_to_download)
 
-length = datasets.__sizeof__()
-threads = []
-for dataset in datasets[0:length]:
-    t = threading.Thread(target=process_data_set, args=(dataset,))
-    threads.append(t)
-    t.start()
+if length_to_download == "":
+    length_to_download = datasets.__sizeof__()
+
+# convert lenght to download to int
+length_from_download = int(length_from_download)
+length_to_download = int(length_to_download)
+
+if download_only == "true":
+    threads = []
+    scheduler = BlockingScheduler()
+    for dataset in datasets[length_from_download:length_to_download]:
+        scheduler.add_job(process_data_set, 'interval', args=(dataset,), seconds=1)
+    scheduler.start()
+
+if batch_all_files == "true":
+    batch_files()
+
+if push_to_delta == "true":
+    files = get_all_files("./all_output/")
+    for file in files:
+        upload_to_delta(file, miner, estuary_api_key)
