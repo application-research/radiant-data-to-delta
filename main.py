@@ -113,26 +113,29 @@ def batch_files(location="./all_datasets/", output_location="./all_output/"):
 miner = sys.argv[1]
 estuary_api_key = sys.argv[2]
 download_only = sys.argv[3]
-length_to_download = sys.argv[4]
-batch_all_files = sys.argv[5]
-push_to_delta = sys.argv[6]
+length_from_download = sys.argv[4]
+length_to_download = sys.argv[5]
+batch_all_files = sys.argv[6]
+push_to_delta = sys.argv[7]
 datasets = Dataset.list()
 
 print("miner: " + miner)
 print("estuary_api_key: " + estuary_api_key)
 print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
+print("length_from_download: " + length_from_download)
 print("length_to_download: " + length_to_download)
 
 if length_to_download == "":
     length_to_download = datasets.__sizeof__()
 
 # convert lenght to download to int
+length_from_download = int(length_from_download)
 length_to_download = int(length_to_download)
 
 if download_only == "true":
     threads = []
     scheduler = BlockingScheduler()
-    for dataset in datasets[0:length_to_download]:
+    for dataset in datasets[length_from_download:length_to_download]:
         scheduler.add_job(process_data_set, 'interval', args=(dataset,), seconds=1)
     scheduler.start()
 
