@@ -121,6 +121,7 @@ datasets = Dataset.list()
 print("miner: " + miner)
 print("estuary_api_key: " + estuary_api_key)
 print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
+print("length_to_download: " + length_to_download)
 
 if length_to_download == "":
     length_to_download = datasets.__sizeof__()
