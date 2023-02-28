@@ -8,6 +8,7 @@ import sys
 from codecs import encode
 from radiant_mlhub import Dataset
 import threading
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 context = ssl.create_default_context()
 context.check_hostname = False
@@ -112,21 +113,27 @@ def batch_files(location="./all_datasets/", output_location="./all_output/"):
 miner = sys.argv[1]
 estuary_api_key = sys.argv[2]
 download_only = sys.argv[3]
-batch_all_files = sys.argv[4]
-push_to_delta = sys.argv[5]
+length_to_download = sys.argv[4]
+batch_all_files = sys.argv[5]
+push_to_delta = sys.argv[6]
 datasets = Dataset.list()
 
 print("miner: " + miner)
 print("estuary_api_key: " + estuary_api_key)
 print("Dataset.__sizeof__(): " + datasets.__sizeof__().__str__())
 
+if length_to_download == "":
+    length_to_download = datasets.__sizeof__()
+
+# convert lenght to download to int
+length_to_download = int(length_to_download)
+
 if download_only == "true":
-    length = datasets.__sizeof__()
     threads = []
-    for dataset in datasets[0:length]:
-        t = threading.Thread(target=process_data_set, args=(dataset,))
-        threads.append(t)
-        t.start()
+    scheduler = BlockingScheduler()
+    for dataset in datasets[0:length_to_download]:
+        scheduler.add_job(process_data_set, 'interval', args=(dataset,), seconds=1)
+    scheduler.start()
 
 if batch_all_files == "true":
     batch_files()

@@ -75,17 +75,17 @@ API Key: Enter your API key here...
 
 ## Download the files first
 ```bash
-python main.py <miner> <estuary_api_key> true false false
+python main.py <miner> <estuary_api_key> all true false false
 ```
 
 ## Group the files
 ```bash
-python main.py <miner> <estuary_api_key> false true false
+python main.py <miner> <estuary_api_key> all false true false
 ```
 
 ## Push the batch files to delta
 ```bash
-python main.py <miner> <estuary_api_key> false false true
+python main.py <miner> <estuary_api_key> all false false true
 ```
 
 # Author
