@@ -15,7 +15,7 @@ files=[
   ('data',('baga6ea4seaqhfvwbdypebhffobtxjyp4gunwgwy2ydanlvbe6uizm5hlccxqmeq.car',open('/Users/alvinreyes/Downloads/baga6ea4seaqhfvwbdypebhffobtxjyp4gunwgwy2ydanlvbe6uizm5hlccxqmeq.car','rb'),'application/octet-stream'))
 ]
 headers = {
-  'Authorization': 'Bearer EST18096aa7-e0cc-4a2e-8a03-e595fe534b14ARY'
+  'Authorization': 'Bearer EST-JUSTANEXAMPLE-ARY'
 }
 
 response = requests.request("POST", url, headers=headers, data=payload, files=files)
