@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Page</title>
+    <style>
+      #data-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#data-table th, #data-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#data-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#data-table tr:hover {
+  background-color: #f5f5f5;
+}
+body {
+  margin: 20px;
+  padding: 20px;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+#data-table td {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+    </style>
+  </head>
+  <body>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>CID</th>
+          <th>Created Date</th>
+          <th>Updated Date</th>
+          <th>Status</th>
+          <th>Status Message</th>
+          <th>Estuary Key</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td id="id">{{ row[0] }}</td>
+          <td id ="name">{{ row[1] }}</td>
+          <td id ="size">{{ row[2] }}</td>
+          <td id = "cid">{{ row[3] }}</td>
+          <td id = "created_date">{{ row[4] }}</td>
+          <td id = "updated_date">{{ row[5] }}</td>
+          <td id = "status">{{ row[6] }}</td>
+          <td id = "status_message">{{ row[7] }}</td>
+          <td id = "estuary_key">{{ row[8] }}</td>
+          <td><button onclick="refreshRow({{ [row[0], row[8]] }})">Refresh</button></td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script>
+      // function updateTable() {
+      //   // Send a request to get the latest data
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.open('GET', '/data', true);
+      //   xhr.onreadystatechange = function() {
+      //     if (xhr.readyState === 4 && xhr.status === 200) {
+      //       // Update the table with the latest data
+      //       var data = JSON.parse(xhr.responseText).data;
+      //       var table = document.getElementById('data-table');
+      //       table.getElementsByTagName('tbody')[0].innerHTML = '';
+      //       for (var i = 0; i < data.length; i++) {
+      //         var row = table.insertRow(-1);
+      //         var idCell = row.insertCell(0);
+      //         var nameCell = row.insertCell(1);
+      //         var ageCell = row.insertCell(2);
+      //         idCell.innerHTML = data[i][0];
+      //         nameCell.innerHTML = data[i][1];
+      //         ageCell.innerHTML = data[i][2];
+      //       }
+      //     }
+      //   };
+      //   xhr.send();
+      // }
+      //
+      // // Call the updateTable() function every 10 seconds
+      // setInterval(updateTable, 10000);
+
+      function refreshRow(rowId) {
+        // row id is the ID in db
+        const id = rowId[0]
+        const key = rowId[1]
+        console.log("starting fetch for " + id)
+        fetch(`/update_id/${id}/${key}`)
+                .then(response=> response.json())
+        window.location.reload()
+      }
+    </script>
+  </body>
+</html>
